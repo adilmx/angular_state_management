@@ -1,1 +1,43 @@
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+@import 'themes';
+@import '~@nebular/theme/styles/globals';
+@include nb-install() {
+    @include nb-theme-global();
+}
+
+;
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
+
+.nb-theme-default nb-layout-header nav {
+    align-items: center;
+    padding: 0 !important;
+    justify-content: space-between !important;
+}
+
+.nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column {
+    padding: 0 !important;
+}
+
+.nb-theme-default nb-layout .layout {
+    /* background: rgb(165, 186, 212);
+    background: linear-gradient(90deg, rgba(165, 186, 212, 1) 0%, rgba(255, 255, 255, 1) 100%); */
+    background: rgb(82, 119, 164);
+    background: linear-gradient(90deg, rgba(82, 119, 164, 1) 0%, rgba(157, 157, 157, 1) 100%);
+}
+
+.dropdown-menu {
+    background-color: #444b5f;
+    color: aliceblue !important;
+}

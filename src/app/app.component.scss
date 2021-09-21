@@ -1,0 +1,105 @@
+/* colors */
+
+$color-primary-100: #f2f6ff;
+$color-primary-200: #d9e4ff;
+$color-primary-300: #a6c1ff;
+$color-primary-400: #598bff;
+$color-primary-500: #3366ff;
+$color-primary-600: #274bdb;
+$color-primary-700: #1a34b8;
+$color-primary-800: #102694;
+$color-primary-900: #091c7a;
+$color-secondary-100: #161d2c;
+
+/* shared style */
+
+
+/* mixins */
+
+@mixin nav-style-100($font-weight, $font-size, $margin) {
+    color: $color-secondary-100;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border: 1px sold #f2f2f2;
+    border-radius: .90rem 0 .90rem 0;
+    margin: $margin;
+}
+
+.nav-mx {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    .logo {
+        width: fit-content;
+        @include nav-style-100(bolder, 24px, 5px);
+    }
+    .elements {
+        width: 100%;
+        a {
+            float: right;
+            @include nav-style-100(lighter, 20px, 0);
+        }
+        a.dropdown-item {
+            color: #f2f2f2;
+        }
+        a.active {
+            background-color: #444b5f;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #ada8aa38;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+
+
+/* bootstrap customization */
+
+.navbar-nav {
+    background-color: #ffffff !important;
+    .dropdown-menu {
+        float: right !important;
+        width: 100% !important;
+    }
+    .nav-item {
+        .nav-link {
+            margin: auto 10px;
+        }
+    }
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #0a2946 !important;
+    }
+    .nav-mx {
+        .logo {
+            @include nav-style-100(bolder, 24px, 0);
+        }
+        .elements {
+            a {
+                float: none;
+                @include nav-style-100(lighter, 20px, 0);
+                color: #d9e4ff !important;
+            }
+            a:hover {
+                border-radius: 0;
+            }
+        }
+    }
+}
