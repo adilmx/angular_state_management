@@ -1,0 +1,61 @@
+<nb-card class="registration-card">
+    <nb-card-body class="registration-card-body">
+        <!-- start of the form -->
+        <form [formGroup]="storyForm" (ngSubmit)="addStory()">
+            <h5>Story informations</h5>
+            <br>
+            <div class="form-control-group">
+                <label class="label" for="title"> Title :</label>
+                <input type="text" fullWidth name="title" id="title" nbInput placeholder="Title..." formControlName="title">
+                <div class="error" *ngIf="storyForm.get('title')?.touched && !storyForm.get('title')?.valid">
+                    field not validated
+                </div>
+            </div>
+            <br>
+            <div class="form-control-group">
+                <label class="label" for="subtitle"> Sub Title :</label>
+                <input type="text" fullWidth name="subtitle" id="subtitle" nbInput placeholder="Sub title..." formControlName="subtitle">
+                <div class="error" *ngIf="storyForm.get('subtitle')?.touched && !storyForm.get('subtitle')?.valid">
+
+                </div>
+            </div>
+            <br>
+            <div class="form-control-group">
+                <label class="label" for="subtitle"> Sub Title :</label>
+                <textarea fullWidth name="content" id="content" nbInput placeholder="The story..." formControlName="content"></textarea>
+                <div class="error" *ngIf="storyForm.get('content')?.touched && !storyForm.get('content')?.valid">
+                    field not validated
+                </div>
+            </div>
+            <br>
+            <h5>Author informations</h5>
+            <br>
+            <div class="form-control-group">
+                <label class="label" for="username"> username :</label>
+                <input type="text" fullWidth name="username" id="username" nbInput formControlName="username" placeholder="username...">
+                <div class="error" *ngIf="storyForm.get('username')?.touched && !storyForm.get('username')?.valid">
+                    field not validated
+                </div>
+            </div>
+            <br>
+            <div class="form-control-group">
+                <label class="label" for="email"> email :</label>
+                <input type="text" fullWidth name="email" id="email" nbInput formControlName="email" placeholder="email...">
+                <div class="error" *ngIf="storyForm.get('email')?.touched && !storyForm.get('email')?.valid">
+                    field not validated
+                </div>
+            </div>
+            <br>
+            <div class="form-control-group">
+                <label class="label" for="tele"> tele :</label>
+                <input type="tel" fullWidth name="tele" id="tele" nbInput formControlName="tele" placeholder="tele...">
+                <div class="error" *ngIf="storyForm.get('tele')?.touched && !storyForm.get('tele')?.valid">
+                    field not validated
+                </div>
+            </div>
+            <br>
+            <button nbButton status="primary" [disabled]="!storyForm.valid">Add Story</button>
+            <!-- alraedy have an account : forward to login page -->
+        </form>
+    </nb-card-body>
+</nb-card>
