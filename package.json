@@ -28,6 +28,8 @@
     "@nebular/eva-icons": "8.0.0",
     "@nebular/theme": "^8.0.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "@ngrx/store": "^12.4.0",
+    "@ngrx/store-devtools": "^12.4.0",
     "bootstrap": "^4.5.0",
     "eva-icons": "^1.1.2",
     "rxjs": "~6.6.0",
